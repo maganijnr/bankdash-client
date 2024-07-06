@@ -17,17 +17,28 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+.active-item{
+  position: relative;
+}
+
+.active-item::before{
+  content: " ";
+  position: absolute;
+  height: 30px;
+  width: 5px;
+  background-color: #2D60FF;
+  left: -1px;
+  border-radius: 0px 10px 10px 0px;
 }
